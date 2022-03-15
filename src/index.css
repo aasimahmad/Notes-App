@@ -6,12 +6,38 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0em;
+}
+
+.logo {
+  width:40px;
+  height:40px;
+}
+
+.header h1 {
+  flex-grow: 2;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
 .container {
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 1em;
   padding-right: 15px;
   padding-left: 15px;
+  min-height: 100vh;
 }
 
 .notes-list {
@@ -34,14 +60,14 @@ textarea:focus {
   outline: none;
 }
 
-.save {
+.button {
   background-color: #e1e1e1;
   border: none;
   border-radius: 15px;
   padding: 5px 10px;
 }
 
-.save:hover {
+.button:hover {
   background-color: #ededed;
   cursor: pointer;
 }
@@ -54,10 +80,33 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: pre-wrap
 }
 
 .note-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  background-color: rgb(233, 233, 233);
+  border: none;
+}
+
+.search input:focus {
+  outline: none;
 }
